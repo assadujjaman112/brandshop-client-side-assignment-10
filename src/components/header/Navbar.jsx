@@ -1,6 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../images/logo_transparent.png";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext)
+  const handleSignOut = ()=> {
+    logOut()
+    .then()
+    .catch()
+  }
   return (
     <div className="w-4/5 mx-auto flex justify-between items-center">
       <div className="flex items-center">
@@ -42,7 +50,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div>
-        <Link to="/login"><button className="btn">Login</button></Link>
+        {
+          user? <Link><button onClick={handleSignOut} className="btn">log out</button></Link> :
+          <Link to="/login"><button className="btn">Login</button></Link> 
+        }
       </div>
     </div>
   );
