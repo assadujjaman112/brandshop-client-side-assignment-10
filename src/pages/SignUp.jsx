@@ -4,7 +4,7 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser , googleSignIn} = useContext(AuthContext);
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -18,6 +18,15 @@ const SignUp = () => {
         })
         .catch(error => {
             console.error(error);
+        })
+    }
+    const handleGoogleSignIn = ()=> {
+        googleSignIn()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error =>{
+            console.error(error)
         })
     }
   return (
@@ -59,6 +68,7 @@ const SignUp = () => {
               <button className="btn bg-red-400 text-white hover:text-black">Sign Up</button>
             </div>
           </form>
+          <button onClick={handleGoogleSignIn} className="btn mb-5 w-1/3 mx-auto">Google SignIn</button>
           <h2 className="text-center mb-6">Already have an account? <Link  to="/login" className="text-red-400">Login</Link></h2>
         </div>
       </div>
