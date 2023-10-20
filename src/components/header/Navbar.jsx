@@ -10,15 +10,15 @@ const Navbar = () => {
     .catch()
   }
   return (
-    <div className="w-4/5 mx-auto flex justify-between items-center">
-      <div className="flex items-center">
+    <div className="w-4/5 mx-auto lg:flex items-center justify-between">
+      <div className="flex items-center justify-center">
         <div>
           <img className="w-28 h-16 mt-5" src={logo} alt="" />
         </div>
         <h1 className="text-3xl font-bold">GadgetGrove</h1>
       </div>
       <div>
-        <ul className="flex gap-3">
+        <ul className="flex gap-3 justify-center">
           <li>
             <NavLink
               to="/"
@@ -35,7 +35,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/addproduct"
+              to="/addProduct"
               className={({ isActive, isPending }) =>
                 isPending
                   ? "pending"
@@ -63,10 +63,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div className="my-5 lg:my-0 ">
         {
-          user? <Link><button onClick={handleSignOut} className="btn">log out</button></Link> :
-          <Link to="/login"><button className="btn">Login</button></Link> 
+          user? <Link><button onClick={handleSignOut} className="btn bg-red-400 text-white hover:text-black w-full">log out</button></Link> :
+          <Link to="/login"><button className="btn bg-red-400 text-white hover:text-black w-full">Login</button></Link> 
         }
       </div>
     </div>

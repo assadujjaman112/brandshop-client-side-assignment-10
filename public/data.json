@@ -1,0 +1,33 @@
+[
+    { 
+        "id": 1, 
+        "name": "Apple", 
+        "img": "https://i.ibb.co/S5cyRMj/apple-logo-transparent.png" 
+    },
+    { 
+        "id": 2, 
+        "name": "Samsung", 
+        "img": "https://i.ibb.co/JQWv1dn/samsung-1-logo-png-transparent.png" 
+    },
+    { 
+        "id": 3, 
+        "name": "Sony", 
+        "img": "https://i.ibb.co/yP22mvC/Sony-Logo-1957.png" 
+    },
+    { 
+        "id": 4, 
+        "name": "Google", 
+        "img": "https://i.ibb.co/nk4GBb7/580b57fcd9996e24bc43c51f.png" 
+    },
+    { 
+        "id": 5, 
+        "name": "Intel", 
+        "img": "https://i.ibb.co/72v1LhZ/Intel-logo-2022.png" 
+    },
+    { 
+        "id": 6, 
+        "name": "Tencent", 
+        "img": "https://i.ibb.co/WK1hRyS/Tencent-Sees-Share-Rise-after-Games-Accepted-01-Header.png" 
+    }
+  ]
+  

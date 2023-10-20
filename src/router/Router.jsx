@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
-import AddProduct from "../../AddProduct";
+import AddProduct from "../pages/AddProduct";
 import PrivateRoute from "./PrivateRoute";
 import MainLayout from "../layout/MainLayout";
 
@@ -15,10 +15,11 @@ const router = createBrowserRouter([
         children : [
             {
                 path : "/",
-                element : <Home></Home>
+                element : <Home></Home>,
+                loader : () => fetch("/data.json")
             },
             {
-                path : "/addproduct",
+                path : "/addProduct",
                 element : <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
