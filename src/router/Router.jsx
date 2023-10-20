@@ -5,6 +5,7 @@ import SignUp from "../pages/SignUp";
 import AddProduct from "../pages/AddProduct";
 import PrivateRoute from "./PrivateRoute";
 import MainLayout from "../layout/MainLayout";
+import BrandDetails from "../components/BrandDetails";
 
 
 
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
                 path : "/",
                 element : <Home></Home>,
                 loader : () => fetch("/data.json")
+            },
+            {
+                path : "/brands/:name",
+                element : <BrandDetails></BrandDetails>,
+                loader : () => fetch("http://localhost:5000/products")
             },
             {
                 path : "/addProduct",

@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../images/logo_transparent.png";
+import logo from "../../assets/images/logo_transparent.png";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
     .catch()
   }
   return (
-    <div className="w-4/5 mx-auto lg:flex items-center justify-between">
+    <div className="w-4/5 mx-auto lg:flex items-center justify-between my-2">
       <div className="flex items-center justify-center">
         <div>
           <img className="w-28 h-16 mt-5" src={logo} alt="" />
