@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import Footer from "../components/footer/Footer";
+import { BsGoogle } from "react-icons/bs";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -13,6 +13,16 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  const handleGoogleSignIn = () => {
+    googleSignIn()
       .then((result) => {
         console.log(result.user);
         navigate(location?.state ? location.state : "/");
@@ -65,6 +75,14 @@ const Login = () => {
                 </button>
               </div>
             </form>
+            <div className="flex">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn mb-5 w-1/3 mx-auto"
+              >
+                <BsGoogle></BsGoogle> Google login
+              </button>
+            </div>
             <h2 className="text-center mb-6">
               Do not have an account?{" "}
               <Link to="/signup" className="text-red-400">

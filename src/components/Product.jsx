@@ -1,10 +1,10 @@
-import Footer from "./footer/Footer";
+
 
 
 const Product = ({ product }) => {
   const { image, name, brand, type, price, rating } = product;
   return (
-      <div className="bg-slate-200 rounded-lg h-[480px] my-5 md:my-10 lg:my-16">
+      <div className="bg-slate-200 rounded-lg h-[480px]">
         <div>
           <img className="w-full h-64 rounded-t-lg" src={image} alt="" />
         </div>
@@ -20,7 +20,7 @@ const Product = ({ product }) => {
             Update
           </button>
           <button className="btn w-1/3 mx-5 bg-red-400 text-white hover:bg-red-600">
-            Delete
+            Details
           </button>
         </div>
       </div>

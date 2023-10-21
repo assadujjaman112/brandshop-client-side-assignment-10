@@ -11,7 +11,7 @@ const BrandDetails = () => {
   console.log(filteredProducts);
   return (
     <div>
-      <div className=" my-5 md:my10 lg:my16">
+      <div className=" my-5 md:my-10 lg:my-16">
         {filteredProducts.length > 0 ? (
           <div className="w-11/12 md:w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts?.map((product) => (

@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { BsGoogle } from "react-icons/bs";
-import Footer from "../components/footer/Footer";
 
 const SignUp = () => {
-  const { createUser, googleSignIn } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -21,15 +19,7 @@ const SignUp = () => {
         console.error(error);
       });
   };
-  const handleGoogleSignIn = () => {
-    googleSignIn()
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
+  
   return (
     <div>
       <div className="lg:w-1/3 mx-auto mt-6">
@@ -74,14 +64,7 @@ const SignUp = () => {
                 </button>
               </div>
             </form>
-            <div className="flex">
-              <button
-                onClick={handleGoogleSignIn}
-                className="btn mb-5 w-1/3 mx-auto"
-              >
-                <BsGoogle></BsGoogle> Google login
-              </button>
-            </div>
+            
             <h2 className="text-center mb-6">
               Already have an account?{" "}
               <Link to="/login" className="text-red-400">
