@@ -1,4 +1,4 @@
-import Footer from "./footer/Footer";
+
 
 const NoProduct = () => {
   return (

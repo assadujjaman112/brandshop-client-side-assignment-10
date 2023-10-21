@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { BsGoogle } from "react-icons/bs";
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
+  const [logError, setLogError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -19,6 +20,7 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
+        setLogError(error.message)
       });
   };
   const handleGoogleSignIn = () => {
@@ -69,6 +71,9 @@ const Login = () => {
                   </a>
                 </label>
               </div>
+              {
+                logError && <p className="text-red-400">{logError}</p>
+              }
               <div className="form-control mt-6">
                 <button className="btn bg-red-400 text-white hover:text-black">
                   Login
