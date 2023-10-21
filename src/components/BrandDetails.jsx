@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Product from "./Product";
-import NoProduct from "./Noproduct";
+import NoProduct from "./NoProduct";
 
 const BrandDetails = () => {
   const products = useLoaderData();

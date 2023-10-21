@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const {_id, image, name, brand, type, price, rating } = product;
+  const { _id, image, name, brand, type, price, rating } = product;
   return (
     <div className="bg-slate-200 rounded-lg h-[480px]">
       <div>
@@ -15,9 +15,11 @@ const Product = ({ product }) => {
         <p className="font-bold">Rating : {rating}</p>
       </div>
       <div className="w-full">
-        <button className="btn w-1/3 mx-5 bg-red-400 text-white hover:bg-red-600">
-          Update
-        </button>
+        <Link to={`/updateProduct/${_id}`}>
+          <button className="btn w-1/3 mx-5 bg-red-400 text-white hover:bg-red-600">
+            Update
+          </button>
+        </Link>
         <Link to={`/productDetails/${_id}`}>
           <button className="btn w-1/3 mx-5 bg-red-400 text-white hover:bg-red-600">
             Details
