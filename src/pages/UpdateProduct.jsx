@@ -1,3 +1,4 @@
+
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -17,7 +18,7 @@ const UpdateProduct = () => {
         const price = form.price?.value;
         const rating = form.rating?.value;
     
-        const updatedProduct = {image,  name, brand, type, price, rating };
+        const updatedProduct = {image,  name, brand, type, price, rating};
         console.log(name,updatedProduct);
     
         fetch(`http://localhost:5000/products/${_id}`, {

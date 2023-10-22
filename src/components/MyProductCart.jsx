@@ -1,10 +1,9 @@
 import Swal from "sweetalert2";
 
-const MyProductCart = ({ product }) => {
+const MyProductCart = ({ product, myProducts, setMyProducts }) => {
   const { _id, image, name, brand, price } = product;
 
-  const handleDelete = (_id) => {
-    console.log(_id);
+  const handleDelete = (id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -15,13 +14,19 @@ const MyProductCart = ({ product }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/myCollection/${_id}`,{
-            method : "DELETE"
+        fetch(`http://localhost:5000/myCollection/${id}`, {
+          method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
+              console.log(myProducts)
+              const remaining = myProducts?.filter(
+                (product) => product._id !== id
+              );
+              console.log(remaining)
+              setMyProducts(remaining);
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           });
@@ -32,9 +37,9 @@ const MyProductCart = ({ product }) => {
     <div>
       <div className="flex gap-10 items-center bg-slate-100  rounded-lg h-64 shadow-lg">
         <div className="w-3/5">
-          <img className="h-64 rounded-l-lg " src={image} alt="" />
+          <img className="h-64 w-full rounded-l-lg " src={image} alt="" />
         </div>
-        <div className="pr-5">
+        <div className="pr-5 w-2/5">
           <h1>
             <span className="font-bold">Name : </span>
             {name}

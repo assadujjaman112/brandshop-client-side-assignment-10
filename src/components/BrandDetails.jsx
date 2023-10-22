@@ -9,7 +9,6 @@ const BrandDetails = () => {
     (product) => product.brand === name
   );
   const SliderProduct = filteredProducts.slice(0, 3);
-  console.log(filteredProducts, SliderProduct);
   return (
     <div>
       {filteredProducts.length > 0 && (

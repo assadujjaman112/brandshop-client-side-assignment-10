@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../providers/AuthProvider";
 
 const ProductDetails = () => {
+  const {user} = useContext(AuthContext);
   const data = useLoaderData();
+  const email = user.email
   console.log(data)
   const {image,name, brand, type, price, description, rating}= data;
-  const dataWithoutId = {image,name, brand, type, price, description, rating};
+  const dataWithoutId = {image,name, brand, type, price, description, rating,email};
 
   const handleAddToCart = () => {
     fetch("http://localhost:5000/myCollection", {
@@ -14,9 +19,12 @@ const ProductDetails = () => {
       },
       body: JSON.stringify(dataWithoutId),
     })
-      .then((res) => res.json)
+      .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.insertedId){
+          Swal.fire("Success!", "Product Added to Cart", "success");
+        }
       });
   };
 

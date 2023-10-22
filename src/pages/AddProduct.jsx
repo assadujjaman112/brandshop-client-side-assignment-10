@@ -1,3 +1,4 @@
+
 import Swal from "sweetalert2";
 
 const AddProduct = () => {
@@ -13,7 +14,7 @@ const AddProduct = () => {
     const description = form.description.value;
     const rating = form.rating.value;
 
-    const newProduct = { image, name, brand, type, price, description, rating };
+    const newProduct = { image, name, brand, type, price, description, rating};
     console.log(newProduct);
 
     fetch("http://localhost:5000/products", {
