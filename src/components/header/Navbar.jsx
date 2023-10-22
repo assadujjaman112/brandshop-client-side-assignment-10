@@ -31,15 +31,15 @@ const Navbar = () => {
     setMode(currentMode);
   }, []);
   return (
-    <div className="w-4/5 mx-auto lg:flex items-center justify-between my-2 dark:text-white py-5 mt-0">
-      <div className="flex items-center justify-center gap-5">
+    <div className="w-4/5 mx-auto flex  flex-col lg:flex-row items-center justify-between my-2 dark:text-white py-5 mt-0">
+      <div className="flex items-center justify-center gap-5 space-y-5 md:space-y-0">
         <div className="">
           <img className="w-12 h-12  dark:text-white" src={logo} alt="" />
         </div>
         <h1 className="text-3xl font-bold">GadgetGrove</h1>
       </div>
       <div>
-        <ul className="flex gap-3 justify-center">
+        <ul className="flex gap-3 justify-center my-4 lg:my-0">
           <li>
             <NavLink
               to="/"
@@ -100,13 +100,13 @@ const Navbar = () => {
       </div>
       <div>
         {user && (
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5 justify-center items-center">
             <img className="w-14 rounded-full" src={user.photoURL} alt="" />
             <h1>{user.displayName}</h1>
           </div>
         )}
       </div>
-      <div className=" flex justify-between my-5 lg:my-0 ">
+      <div className=" flex justify-center my-5 lg:my-0">
         <button onClick={handleMode} className="w-16">
           {mode === "light" ? (
             <BsFillMoonFill className="text-3xl"></BsFillMoonFill>

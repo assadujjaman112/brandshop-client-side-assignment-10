@@ -11,7 +11,7 @@ const Home = () => {
     <div>
       <div>
         <div className="py-5 md:py-10 lg:py-16 bg-slate-100 mb-5 md:mb-10 lg:mb-16 dark:bg-slate-50">
-          <div className="flex flex-col md:flex-row w-full md:w-4/5 mx-auto justify-between items-center">
+          <div className="flex flex-col md:flex-row w-11/12 md:w-4/5 mx-auto justify-between items-center">
             <div className="space-y-3">
               <h2 className="text-2xl md:text-3xl lg:text-4xl text-red-400 font-bold">
                 BUY NOW
@@ -54,12 +54,12 @@ const Home = () => {
             suggestions about this website and/or any other issues that you wish
             to raise.
           </p>
-          <div className="flex justify-evenly items-center w-11/12 md:w-4/5 mx-auto bg-red-50 py-20 px-16 rounded-lg">
+          <div className="flex flex-col md:flex-row justify-evenly items-center w-11/12 md:w-4/5 mx-auto bg-red-50 py-20 px-16 rounded-lg">
             <p className="font-bold flex items-center gap-3">
               <AiOutlineMail className="text-2xl"></AiOutlineMail>{" "}
               gadgetgrove@gmail.com
             </p>
-            <p className="font-bold flex items-center gap-3">
+            <p className="font-bold flex items-center gap-3 my-3 md:my-0">
               <AiFillPhone className="text-2xl"></AiFillPhone> 01209783421
             </p>
             <p className="font-bold flex items-center gap-3">
@@ -72,7 +72,7 @@ const Home = () => {
           <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-5 lg:mb-8 dark:text-white">
             Supp<span className="text-red-400">ort</span>
           </h1>
-          <div className="flex py-20 px-16 rounded-lg bg-red-50">
+          <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 py-20 px-16 rounded-lg bg-red-50">
             <div>
               <div className="flex justify-center">
                 <BiSupport className=" text-6xl mb-3"></BiSupport>

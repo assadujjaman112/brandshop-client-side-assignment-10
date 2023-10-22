@@ -10,7 +10,7 @@ const MyCart = () => {
   const[myProducts, setMyProducts] = useState(filteredAllProduct)
   return (
     <div className="bg-red-50 py-5 md:py-10 lg:py-16">
-      <div className="w-11/12 md:w-4/5 mx-auto">
+      <div className="w-11/12 lg:w-4/5 mx-auto">
         <h1 className="text-center font-bold text-3xl md:text-4xl lg:text-5xl">
           My <span className="text-red-400">Products</span>{" "}
         </h1>

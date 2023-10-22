@@ -8,7 +8,7 @@ const Product = ({ product }) => {
         <img className="w-full h-64 rounded-t-lg" src={image} alt="" />
       </div>
       <div className="ml-5 my-5">
-        <h1 className="text-xl font-bold">Name : {name}</h1>
+        <h1 className="text-xl md:text-sm lg:text-xl font-bold">Name : {name}</h1>
         <p className="font-bold">Brand Name : {brand}</p>
         <p className="font-bold">Type : {type}</p>
         <p className="font-bold">Price : {price}</p>

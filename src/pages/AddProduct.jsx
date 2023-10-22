@@ -34,7 +34,7 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <div className="w-4/5 mx-auto bg-[#F4F3F0] p-10 mt-5 md:mt-10 lg:mt-16 rounded-md">
+      <div className="w-4/5 mx-auto bg-[#F4F3F0] p-10 my-5 md:my-10 lg:my-16 rounded-md">
         <h1 className="text-center text-3xl font-bold mb-5">Add New Product</h1>
         <form onSubmit={handleAddProduct}>
           {/* Image and Name */}
