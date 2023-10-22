@@ -32,7 +32,7 @@ const BrandDetails = () => {
               </div>
             ))}
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mt-5 md:mt-10 lg:mt-16">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mt-5 md:mt-10 lg:mt-16 dark:text-white">
             All <span className="text-red-400">{name} </span>Products
           </h1>
         </div>
