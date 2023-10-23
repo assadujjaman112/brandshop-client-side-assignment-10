@@ -26,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/brands/:name",
         element: <BrandDetails></BrandDetails>,
-        loader: () => fetch("http://localhost:5000/products"),
+        loader: () => fetch("https://brand-shop-server-hla13wpfm-assadujjamans-projects.vercel.app/products"),
       },
       {
         path: "/addProduct",
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://brand-shop-server-hla13wpfm-assadujjamans-projects.vercel.app/products/${params.id}`),
       },
       {
         path: "/productDetails/:id",
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://brand-shop-server-hla13wpfm-assadujjamans-projects.vercel.app/products/${params.id}`),
       },
       {
         path: "/myCart",
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             <MyCart></MyCart>
           </PrivateRoute>
         ),
-        loader : () => fetch("http://localhost:5000/myCollection")
+        loader : () => fetch("https://brand-shop-server-hla13wpfm-assadujjamans-projects.vercel.app/myCollection")
       },
       {
         path: "/signup",

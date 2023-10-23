@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const dataWithoutId = {image,name, brand, type, price, description, rating,email};
 
   const handleAddToCart = () => {
-    fetch("http://localhost:5000/myCollection", {
+    fetch("https://brand-shop-server-hla13wpfm-assadujjamans-projects.vercel.app/myCollection", {
       method: "POST",
       headers: {
         "content-type": "application/json",

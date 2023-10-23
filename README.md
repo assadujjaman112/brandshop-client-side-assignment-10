@@ -1,8 +1,11 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Live link : https://brand-shop-d7a8b.web.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project features :- 
+
+- A user can login to this website using email, password and google account.
+- A user can see different products of different brands.
+- A user can add product to cart and see all the added products in a page.
+- A user can add a product to the database and can see all the products.
+- A user can update a product .
