@@ -18,6 +18,7 @@ Used Technology :-
 - JavaScript
 - React
 - Tailwind Css
+- Firebase
 - Node.js
 - Express.js
 
